@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,6 +41,7 @@ public class UpdateDataActivity extends AppCompatActivity {
         TextView balanceTextView = (TextView) findViewById(R.id.displayBalanceTextView);
 
         EditText fareEditView = (EditText) findViewById(R.id.editTextFare);
+        fareEditView.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5000")});
 
         Button submitFareButton = (Button) findViewById(R.id.authenticatePaymentButton);
 
