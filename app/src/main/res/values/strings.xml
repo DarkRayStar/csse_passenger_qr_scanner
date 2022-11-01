@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Smart Pass</string>
+    <string name="scanner_screen_name">Scan Passenger QR Pass</string>
+    <string name="title_update_data_activity">Authenticate Payment</string>
+    <string name="first_fragment_label">QR SCANNER</string>
+</resources>

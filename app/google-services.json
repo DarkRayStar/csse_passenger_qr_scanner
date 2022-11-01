@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "947994727314",
+    "project_id": "csse-inspector-qr-app",
+    "storage_bucket": "csse-inspector-qr-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947994727314:android:1b3a3f9bdbaa8640e0274b",
+        "android_client_info": {
+          "package_name": "com.example.qrcodescanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947994727314-5dpvd0juvjggdo1lkrpj7lcucql2qhv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAor8Rt0rhiZq5CimuGsIFrEa-clb-SsBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947994727314-5dpvd0juvjggdo1lkrpj7lcucql2qhv5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
