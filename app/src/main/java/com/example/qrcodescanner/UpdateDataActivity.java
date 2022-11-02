@@ -17,7 +17,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -41,7 +40,7 @@ public class UpdateDataActivity extends AppCompatActivity {
         TextView balanceTextView = (TextView) findViewById(R.id.displayBalanceTextView);
 
         EditText fareEditView = (EditText) findViewById(R.id.editTextFare);
-        fareEditView.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5000")});
+        fareEditView.setFilters(new InputFilter[]{new ComparisonMethods("1", "5000")});
 
         Button submitFareButton = (Button) findViewById(R.id.authenticatePaymentButton);
 
@@ -81,7 +80,9 @@ public class UpdateDataActivity extends AppCompatActivity {
             public void onClick(View v) {
                 float currentBalance = Float.parseFloat(list.get(0));
                 float currentFare = Float.parseFloat(fareEditView.getText().toString());
-                float newBalance = Float.parseFloat(list.get(0)) - currentFare;
+
+                ComparisonMethods comparisonMethods = new ComparisonMethods();
+                float newBalance = comparisonMethods.getNewBalance(Float.parseFloat(list.get(0)), currentFare);
 
                 HashMap<String, Object> hashMap = new HashMap<>();
                 hashMap.put("name", list.get(1).toString());
@@ -106,6 +107,7 @@ public class UpdateDataActivity extends AppCompatActivity {
                                 .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
                                     @Override
                                     public void onClick(SweetAlertDialog sDialog) {
+                                        sDialog.cancel();
                                         UpdateDataActivity.this.finish();
                                     }
                                 })

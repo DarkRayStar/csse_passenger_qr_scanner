@@ -8,11 +8,11 @@
     tools:context=".SplashScreen">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/splashTitleTextView"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/anaheim"
-        android:text="Passenger QR Pass Scanner"
+        android:text="@string/splash_screen_title"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="47sp"
@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.471" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/splashDevInfoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="241dp"
@@ -32,7 +32,7 @@
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="75dp"
         android:fontFamily="@font/anaheim"
-        android:text="Powered by United"
+        android:text="@string/splash_screen_dev_info"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

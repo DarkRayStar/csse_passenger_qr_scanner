@@ -3,4 +3,10 @@
     <string name="scanner_screen_name">Scan Passenger QR Pass</string>
     <string name="title_update_data_activity">Authenticate Payment</string>
     <string name="first_fragment_label">QR SCANNER</string>
+    <string name="splash_screen_title">Passenger QR Pass Scanner</string>
+    <string name="splash_screen_dev_info">Powered by United</string>
+    <string name="retrieving_account_name">Retrieving Account Name..</string>
+    <string name="retrieving_account_balance">Retrieving Account Balance..</string>
+    <string name="proceed">PROCEED</string>
+    <string name="enter_the_fare">Enter the Fare</string>
 </resources>

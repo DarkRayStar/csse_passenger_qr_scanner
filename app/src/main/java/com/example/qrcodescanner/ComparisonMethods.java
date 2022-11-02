@@ -3,20 +3,23 @@ package com.example.qrcodescanner;
 import android.text.InputFilter;
 import android.text.Spanned;
 
-public class InputFilterMinMax implements InputFilter {
+public class ComparisonMethods implements InputFilter {
 
     private int min, max;
 
-    public InputFilterMinMax(int min, int max) {
+    public ComparisonMethods(){};
+
+    public ComparisonMethods(int min, int max) {
         this.min = min;
         this.max = max;
     }
 
-    public InputFilterMinMax(String min, String max) {
+    public ComparisonMethods(String min, String max) {
         this.min = Integer.parseInt(min);
         this.max = Integer.parseInt(max);
     }
 
+    // This method uses to check the 1-5000 LKR constraint on input fare Edit Text input field
     @Override
     public CharSequence filter(CharSequence source, int start, int end, Spanned dest, int dstart, int dend) {
         try {
@@ -27,7 +30,12 @@ public class InputFilterMinMax implements InputFilter {
         return "";
     }
 
-    private boolean isInRange(int a, int b, int c) {
+    // Method to get current balance
+    public Float getNewBalance(Float currentBalance, Float fare) {
+        return currentBalance - fare;
+    }
+
+    public boolean isInRange(int a, int b, int c) {
         return b > a ? c >= a && c <= b : c >= b && c <= a;
     }
 }

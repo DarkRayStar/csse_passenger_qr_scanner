@@ -7,11 +7,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 
 public class DAOPassenger {
+
     private static DAOPassenger daoPassenger;
     private DatabaseReference databaseReference;
 
+    private final String firebaseURL = "https://csse-inspector-qr-app-default-rtdb.firebaseio.com/";
+
     public DAOPassenger(String userID) {
-        databaseReference = FirebaseDatabase.getInstance("https://csse-inspector-qr-app-default-rtdb.firebaseio.com/").getReference().child(userID);
+        databaseReference = FirebaseDatabase.getInstance(firebaseURL).getReference().child(userID);
     }
 
     public static DAOPassenger getInstance(String userID) {

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.qrcodescanner">
 
+    // Defines the runtime permissions for the app
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,19 +12,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QRCODESCANNER">
+
         <activity
             android:name=".SplashScreen"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            //intent filter defines the first activity to display when the application started
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".UpdateDataActivity"
             android:label="@string/title_update_data_activity"
-            android:theme="@style/Theme.QRCODESCANNER.NoActionBar"></activity>
-        <activity android:name=".ScannerHomeActivity"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.QRCODESCANNER.NoActionBar" />
+
+        <activity
+            android:name=".ScannerHomeActivity"
+            android:screenOrientation="portrait" />
 
         <meta-data
             android:name="preloaded_fonts"
